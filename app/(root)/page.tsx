@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       {/* ================= FEATURES SECTION ================= */}
-      <section className="bg-[#121212] w-full flex flex-col items-center justify-center text-center px-4">
+      <section className="bg-[#121212] w-full flex flex-col items-center justify-center text-center px-3">
         <Features /> {/* Displays the product's key features */}
       </section>
 

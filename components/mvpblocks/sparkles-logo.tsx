@@ -12,6 +12,8 @@ export default function SparklesEffectPage() {
 
         <FloatingNav />
 
+        {/* <div className="mt-8 mr-10">0</div> */}
+
         <div className="flex items-center justify-end mt-8 mr-10">
           <button className="text-white text-sm bg-white/[0.08] border border-white/[0.15] backdrop-blur-2xl rounded-full py-2 px-4 shadow-[0_8px_32px_rgba(255,255,255,0.1)]">
             Login
