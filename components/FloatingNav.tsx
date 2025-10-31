@@ -28,8 +28,8 @@ export default function FloatingNav() {
           onClick={() => setActive(item.id)}
           className={`relative cursor-pointer flex items-center gap-2 text-sm px-5 py-2 rounded-full transition-all duration-500 ${
             active === item.id
-              ? "text-[oklch(0.63_0.25_21.06)] drop-shadow-[0_0_6px_oklch(0.63_0.25_21.06)]"
-              : "text-white/70 hover:text-white"
+              ? "text-white drop-shadow-[0_0_6px_oklch(0.63_0.25_21.06)]"
+              : "text-white hover:text-white"
           }`}
         >
           {/* 📱 Icon for mobile / 🖥️ Text for desktop */}
