@@ -3,7 +3,7 @@ import { LogIn, Eye, RefreshCcw } from "lucide-react";
 
 function HowToUse() {
   return (
-    <section className="bg-[#121212] pb-16 px-6 flex flex-col items-center text-center relative">
+    <section className="bg-[#121212] sm:pt-10 pt-0 pb-16 px-6 flex flex-col items-center text-center relative">
       {/* Heading */}
       <div className="mb-12">
         <h2 className="text-3xl md:text-4xl text-white">

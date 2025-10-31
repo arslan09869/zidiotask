@@ -3,7 +3,7 @@ import { LayoutDashboard, Users, Clock3, Shield, Briefcase, UserCheck } from "lu
 
 function Features() {
   return (
-    <div className="flex flex-col items-center justify-center py-10 bg-[#121212] px-4">
+    <div className="flex flex-col items-center justify-center sm:py-10 pt-0 pb-10 bg-[#121212] px-4">
       {/* ===== FEATURES HEADING SECTION ===== */}
       <div className="text-center mb-12">
         <p className="text-gray-200 text-3xl md:text-4xl leading-snug">
@@ -26,7 +26,7 @@ function Features() {
       {/* <img src="/cta-2.png" alt="cta-2" /> */}
 
       {/* ===== FEATURE CARDS SECTION ===== */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full sm:mb-20 mb-10">
         {/* CARD 1 */}
         <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2e2e2e] border border-white/10 backdrop-blur-xl p-6 rounded-2xl shadow-lg hover:scale-[1.02] transition-transform duration-300 text-center">
           <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-xl bg-gradient-to-r from-white to-gray-400 text-black">
