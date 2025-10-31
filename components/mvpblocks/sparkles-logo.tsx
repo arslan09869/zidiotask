@@ -19,7 +19,7 @@ export default function SparklesEffectPage() {
         </div>
       </div>
 
-      <div className="mx-auto mt-24 w-screen max-w-2xl">
+      <div className="mx-auto sm:mt-24 mt-20 w-screen max-w-2xl">
         <div className="text-center flex flex-col gap-1">
           <p className="text-rose-200 sm:text-4xl text-3xl">
             Simplify <span className="text-gray-300 font-semibold">Work</span>
@@ -41,7 +41,7 @@ export default function SparklesEffectPage() {
         </div>
 
         <div className="flex items-center justify-center mt-10">
-          <button className="text-gray-200 text-sm bg-rose-500 py-2 px-6 rounded-lg">
+          <button className="text-gray-200 bg-rose-500 py-3 px-8 rounded-lg">
             Get Started
           </button>
         </div>
