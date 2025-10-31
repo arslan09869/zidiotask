@@ -4,6 +4,7 @@ import FloatingNav from "../FloatingNav";
 export default function SparklesEffectPage() {
   return (
     <div className="h-screen w-screen overflow-hidden bg-[#121212]">
+
       <div>
         {/* <div className="">
           <Image src="/zidiotask-logo.png" alt="Zidiotask Logo" width={134} height={0} className=""/>
@@ -20,15 +21,15 @@ export default function SparklesEffectPage() {
 
       <div className="mx-auto mt-24 w-screen max-w-2xl">
         <div className="text-center flex flex-col gap-1">
-          <p className="text-rose-200 text-4xl">
+          <p className="text-rose-200 sm:text-4xl text-3xl">
             Simplify <span className="text-gray-300 font-semibold">Work</span>
           </p>
 
-          <p className="text-rose-200 text-4xl">
+          <p className="text-rose-200 sm:text-4xl text-3xl">
             Empower <span className="text-gray-300 font-semibold">Teams</span>
           </p>
 
-          <p className="text-rose-200 text-4xl">
+          <p className="text-rose-200 sm:text-4xl text-3xl">
             Track Tasks{" "}
             <span className="text-gray-300 font-semibold">Smarter</span>
           </p>

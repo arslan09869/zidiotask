@@ -83,7 +83,7 @@ function FAQandFooter() {
       </section>
 
       {/* ===== SUPPORT SECTION ===== */}
-      <section className="py-16 sm:py-20 flex flex-col items-center text-center border-t border-white/10 px-4 sm:px-6">
+      <section className="py-10 pb-6 sm:py-20 flex flex-col items-center text-center border-t border-white/10 px-4 sm:px-6">
         <h3 className="text-xl sm:text-2xl md:text-3xl mb-3 sm:mb-4">
           Need Help?{" "}
           <span className="bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent">
