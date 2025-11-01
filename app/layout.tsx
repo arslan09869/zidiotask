@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins, Sniglet } from "next/font/google";
+import { Sniglet } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 // ✅ Import the font
-const exo2 = Sniglet({
+const sniglet = Sniglet({
   subsets: ["latin"],
   weight: ["400", "800"], // you can customize weights
   display: "swap",
@@ -24,8 +25,17 @@ export default function AppLayout({
   return (
     <html lang="en">
       {/* Apply font globally */}
-      <body className={`${exo2.className} antialiased bg-background text-foreground`}>
-        {children}
+      <body
+        className={`${sniglet.className} antialiased text-foreground`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

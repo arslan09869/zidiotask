@@ -3,8 +3,7 @@ import FloatingNav from "../FloatingNav";
 
 export default function SparklesEffectPage() {
   return (
-    <div className="h-screen w-screen overflow-hidden bg-[#121212]">
-
+    <div className="h-screen w-screen overflow-hidden dark:bg-[#121212]">
       <div>
         {/* <div className="">
           <Image src="/zidiotask-logo.png" alt="Zidiotask Logo" width={134} height={0} className=""/>
@@ -15,7 +14,7 @@ export default function SparklesEffectPage() {
         {/* <div className="mt-8 mr-10">0</div> */}
 
         <div className="flex items-center justify-end mt-8 mr-10">
-          <button className="text-white text-sm bg-white/[0.08] border border-white/[0.15] backdrop-blur-2xl rounded-full py-2 px-4 shadow-[0_8px_32px_rgba(255,255,255,0.1)]">
+          <button className="text-black dark:text-white text-sm bg-black/[0.05] dark:bg-white/[0.08] border border-black/[0.1] dark:border-white/[0.15] backdrop-blur-2xl rounded-full py-2 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(255,255,255,0.1)] transition-colors duration-300">
             Login
           </button>
         </div>
@@ -23,27 +22,35 @@ export default function SparklesEffectPage() {
 
       <div className="mx-auto sm:mt-24 mt-20 w-screen max-w-2xl">
         <div className="text-center flex flex-col gap-1">
-          <p className="text-rose-200 sm:text-4xl text-3xl">
-            Simplify <span className="text-gray-300 font-semibold">Work</span>
+          <p className="text-rose-700 dark:text-rose-200 sm:text-4xl text-3xl">
+            Simplify{" "}
+            <span className="text-gray-700 dark:text-gray-300 font-semibold">
+              Work
+            </span>
           </p>
 
-          <p className="text-rose-200 sm:text-4xl text-3xl">
-            Empower <span className="text-gray-300 font-semibold">Teams</span>
+          <p className="text-rose-700 dark:text-rose-200 sm:text-4xl text-3xl">
+            Empower{" "}
+            <span className="text-gray-700 dark:text-gray-300 font-semibold">
+              Teams
+            </span>
           </p>
 
-          <p className="text-rose-200 sm:text-4xl text-3xl">
+          <p className="text-rose-700 dark:text-rose-200 sm:text-4xl text-3xl">
             Track Tasks{" "}
-            <span className="text-gray-300 font-semibold">Smarter</span>
+            <span className="text-gray-700 dark:text-gray-300 font-semibold">
+              Smarter
+            </span>
           </p>
 
-          <p className="text-gray-200 mt-6">
+          <p className="text-gray-700 dark:text-gray-200 mt-6">
             Zidiotask helps teams organize projects, hit <br /> deadlines, and
-            boost productivity-all in one place.
+            boost productivity — all in one place.
           </p>
         </div>
 
         <div className="flex items-center justify-center mt-10">
-          <button className="text-gray-200 bg-rose-500 py-3 px-8 rounded-lg">
+          <button className="text-gray-100 dark:text-gray-200 bg-rose-600 dark:bg-rose-500 hover:bg-rose-700 dark:hover:bg-rose-600 py-3 px-8 rounded-lg transition-colors duration-300">
             Get Started
           </button>
         </div>
@@ -92,12 +99,12 @@ export default function SparklesEffectPage() {
         </div>
       </div>
 
-      <div className="relative -mt-32 h-96 w-screen overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#e60a64,transparent_70%)] before:opacity-40 after:absolute after:top-1/2 after:-left-1/2 after:aspect-[1/0.7] after:w-[200%] after:rounded-[100%] after:border-t after:border-[#c5769066] after:bg-zinc-900">
+      <div className="relative -mt-32 h-96 w-screen overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#e60a64,transparent_70%)] before:opacity-40 after:absolute after:top-1/2 after:-left-1/2 after:aspect-[1/0.7] after:w-[200%] after:rounded-[100%] dark:after:border-t after:border-none dark:after:border-[#c5769066] dark:after:bg-zinc-900 after:bg-transparent">
         <SparklesCore
           id="tsparticles"
           background="transparent"
           particleDensity={300}
-          className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
+          className="absolute inset-x-0 bottom-0 h-full w-full bg-[#DC143C] dark:bg-transparent [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
         />
       </div>
     </div>

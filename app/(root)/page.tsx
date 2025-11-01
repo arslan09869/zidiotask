@@ -1,67 +1,75 @@
-// Import all necessary components used on the home page
-import FAQandFooter from "@/components/FAQandFooter"; // Frequently asked questions + footer section
-import Features from "@/components/Features"; // Displays app features (e.g., task management tools)
-import FeaturesForRoles from "@/components/FeaturesForRoles"; // (Optional) Role-based features section
-import HowToUse from "@/components/HowToUse"; // Step-by-step usage or onboarding guide
-import SparklesEffectPage from "@/components/mvpblocks/sparkles-logo"; // Hero section with sparkles animation
+import FAQandFooter from "@/components/FAQandFooter";
+import Features from "@/components/Features";
+import FeaturesForRoles from "@/components/FeaturesForRoles";
+import HowToUse from "@/components/HowToUse";
+import SparklesEffectPage from "@/components/mvpblocks/sparkles-logo";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-white dark:bg-[#121212] transition-colors duration-300">
       {/* ================= HERO / INTRO SECTION ================= */}
-      <SparklesEffectPage /> {/* Top animated header or logo section */}
+      <SparklesEffectPage />
 
       {/* ================= CALL-TO-ACTION (CTA) SECTION ================= */}
-      <section className="bg-[#121212] w-full flex flex-col items-center justify-center text-center px-4 pb-6">
+      <section className="w-full flex flex-col items-center justify-center text-center px-4 pb-6 bg-transparent dark:bg-[#121212] transition-colors duration-300">
         {/* Headline and subtext introducing the main value proposition */}
-        <div className="max-w-2xl">
-          <h2 className="text-4xl md:text-5xl text-gray-100 mb-4">
+        <div className="max-w-2xl dark:mt-0 mt-10">
+          <h2 className="text-4xl md:text-5xl text-gray-900 dark:text-gray-100 mb-4 font-semibold">
             Turn Chaos Into Clarity.
           </h2>
 
           {/* Short description encouraging users to try the platform */}
-          <p className="text-gray-400 text-lg leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
             Plan tasks, set priorities, and visualize progress — all in one
             place. <br />
             Empower your team with{" "}
-            <span className="text-rose-300 font-medium">
+            <span className="text-rose-600 dark:text-rose-300 font-medium">
               live updates, flexible boards, and effortless collaboration.
             </span>
           </p>
 
-          {/* Uncomment this block if you want to add a "Try Now" button */}
-          {/*
-          <div className="mt-4 mb-8">
-            <button className="bg-rose-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-rose-600 transition-all duration-300">
+          {/* Optional CTA Button */}
+          {/* 
+          <div className="mt-6">
+            <button className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-lg shadow-lg transition-all duration-300 dark:bg-rose-500 dark:hover:bg-rose-600">
               Try Zidiotask Free
             </button>
           </div>
           */}
         </div>
 
-        {/* CTA illustration or product image */}
-        <img
-          src="/cta-section.png"
-          alt="cta-card"
-          className="max-w-full sm:w-[80%] w-[90%] h-auto object-contain rounded-4xl mt-12 mb-8"
-        />
+        {/* CTA illustration */}
+       <>
+  {/* Light mode image */}
+  <img
+    src="/cta-section-light.png"
+    alt="cta-card light"
+    className="block dark:hidden max-w-full sm:w-[80%] w-[90%] h-auto object-contain rounded-3xl mt-12 mb-8 shadow-lg transition-shadow duration-300"
+  />
+
+  {/* Dark mode image */}
+  <img
+    src="/cta-section.png"
+    alt="cta-card dark"
+    className="hidden dark:block max-w-full sm:w-[80%] w-[90%] h-auto object-contain rounded-3xl mt-12 mb-8 shadow-lg dark:shadow-[0_4px_30px_rgba(255,255,255,0.1)] transition-shadow duration-300"
+  />
+</>
       </section>
 
       {/* ================= FEATURES SECTION ================= */}
-      <section className="bg-[#121212] w-full flex flex-col items-center justify-center text-center px-3">
-        <Features /> {/* Displays the product's key features */}
+      <section className="w-full flex flex-col items-center justify-center text-center px-3 bg-transparent dark:bg-[#121212] transition-colors duration-300">
+        <Features />
       </section>
 
       {/* ================= HOW TO USE SECTION ================= */}
-      <section>
-        <HowToUse /> {/* Step-by-step instructions or app workflow */}
+      <section className="bg-white dark:bg-[#121212] transition-colors duration-300">
+        <HowToUse />
       </section>
 
       {/* ================= FAQ AND FOOTER SECTION ================= */}
-      <section>
-        <FAQandFooter /> {/* Frequently asked questions and site footer */}
-
-        {/* Uncomment below line if you want to show role-based cards */}
+      <section className="bg-gray-50 dark:bg-[#0a0a0a] transition-colors duration-300">
+        <FAQandFooter />
+        {/* Uncomment to show role-based cards */}
         {/* <FeaturesForRoles /> */}
       </section>
     </div>
