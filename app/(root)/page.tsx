@@ -28,14 +28,6 @@ export default function Home() {
             </span>
           </p>
 
-          {/* Optional CTA Button */}
-          {/* 
-          <div className="mt-6">
-            <button className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-lg shadow-lg transition-all duration-300 dark:bg-rose-500 dark:hover:bg-rose-600">
-              Try Zidiotask Free
-            </button>
-          </div>
-          */}
         </div>
 
         {/* CTA illustration */}
