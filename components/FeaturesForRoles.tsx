@@ -1,5 +1,4 @@
 import { Settings, BarChart3, CheckCircle2 } from "lucide-react";
-import React from "react";
 
 const FeaturesForRoles = () => {
   const roles = [

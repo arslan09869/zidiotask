@@ -1,7 +1,7 @@
 import FAQandFooter from "@/components/FAQandFooter";
 import Features from "@/components/Features";
-import FeaturesForRoles from "@/components/FeaturesForRoles";
 import HowToUse from "@/components/HowToUse";
+import LoginButton from "@/components/Login";
 import SparklesEffectPage from "@/components/mvpblocks/sparkles-logo";
 
 export default function Home() {
@@ -27,25 +27,26 @@ export default function Home() {
               live updates, flexible boards, and effortless collaboration.
             </span>
           </p>
-
         </div>
 
-        {/* CTA illustration */}
-       <>
-  {/* Light mode image */}
-  <img
-    src="/cta-section-light.png"
-    alt="cta-card light"
-    className="block dark:hidden max-w-full sm:w-[80%] w-[90%] h-auto object-contain rounded-3xl mt-12 mb-8 shadow-lg transition-shadow duration-300"
-  />
+        <LoginButton />
 
-  {/* Dark mode image */}
-  <img
-    src="/cta-section.png"
-    alt="cta-card dark"
-    className="hidden dark:block max-w-full sm:w-[80%] w-[90%] h-auto object-contain rounded-3xl mt-12 mb-8 shadow-lg dark:shadow-[0_4px_30px_rgba(255,255,255,0.1)] transition-shadow duration-300"
-  />
-</>
+        {/* CTA illustration */}
+        <>
+          {/* Light mode image */}
+          <img
+            src="/cta-section-light.png"
+            alt="cta-card light"
+            className="block dark:hidden max-w-full sm:w-[80%] w-[90%] h-auto object-contain rounded-3xl mt-12 mb-8 shadow-lg transition-shadow duration-300"
+          />
+
+          {/* Dark mode image */}
+          <img
+            src="/cta-section.png"
+            alt="cta-card dark"
+            className="hidden dark:block max-w-full sm:w-[80%] w-[90%] h-auto object-contain rounded-3xl mt-12 mb-8 shadow-lg dark:shadow-[0_4px_30px_rgba(255,255,255,0.1)] transition-shadow duration-300"
+          />
+        </>
       </section>
 
       {/* ================= FEATURES SECTION ================= */}

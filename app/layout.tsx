@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sniglet } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import AuthProvider from "@/components/AuthProvider";
 
 // ✅ Import the font
 const sniglet = Sniglet({
@@ -24,10 +25,9 @@ export default function AppLayout({
 }>) {
   return (
     <html lang="en">
+      <AuthProvider>
       {/* Apply font globally */}
-      <body
-        className={`${sniglet.className} antialiased text-foreground`}
-      >
+      <body className={`${sniglet.className} antialiased text-foreground`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -37,6 +37,7 @@ export default function AppLayout({
           {children}
         </ThemeProvider>
       </body>
+      </AuthProvider>
     </html>
   );
 }

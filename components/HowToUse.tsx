@@ -1,4 +1,3 @@
-import React from "react";
 import { LogIn, Eye, RefreshCcw } from "lucide-react";
 
 function HowToUse() {
