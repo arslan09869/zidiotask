@@ -88,7 +88,7 @@ export default function Sidebar() {
               className={`flex items-center justify-between w-full px-3 py-2 rounded-lg cursor-pointer 
               hover:bg-gradient-to-r hover:from-rose-500 hover:to-red-900 
               dark:hover:from-rose-800 dark:hover:to-red-700
-              text-gray-700 dark:text-gray-300 hover:text-white
+              text-gray-700 dark:text-gray-100 hover:text-white
               transition-all ${expanded ? "" : "justify-center"}`}
             >
               <div className="flex items-center gap-3">
@@ -116,25 +116,26 @@ export default function Sidebar() {
                 }`}
               >
                 {expanded && (
-                  <div className="absolute left-5 top-0 bottom-0 w-px bg-gradient-to-b from-rose-500 via-gray-300 dark:from-rose-700 dark:via-gray-700 to-transparent" />
+                  <div className="absolute left-5 top-0 bottom-0 w-px bg-gradient-to-b from-black via-gray-500 dark:from-rose-100 dark:via-gray-700 to-transparent" />
                 )}
-                {[
-                  "Design System",
-                  "Mobile App",
-                  "Website Design",
-                  "Design Team",
-                ].map((project, i) => (
-                  <li
-                    key={i}
-                    className="relative flex items-center gap-2 pl-4 cursor-pointer 
-                      text-gray-700 dark:text-gray-400 
+                {expanded &&
+                  [
+                    "Design System",
+                    "Mobile App",
+                    "Website Design",
+                    "Design Team",
+                  ].map((project, i) => (
+                    <li
+                      key={i}
+                      className="relative flex items-center gap-2 pl-4 cursor-pointer 
+                      text-gray-700 dark:text-gray-200 
                       hover:text-gray-900 dark:hover:text-rose-100
                       hover:translate-x-1 transition-all duration-300"
-                  >
-                    <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-rose-500 to-red-500 dark:from-rose-800 dark:to-red-600" />
-                    {project}
-                  </li>
-                ))}
+                    >
+                      {/* <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-rose-500 to-red-500 dark:from-rose-800 dark:to-red-600" /> */}
+                      {project}
+                    </li>
+                  ))}
               </ul>
             )}
           </li>
@@ -222,13 +223,13 @@ function SidebarItem({
         {text}
       </span>
 
-      {alert && (
+      {/* {alert && (
         <div
           className={`absolute right-2 w-2 h-2 rounded-full bg-green-500 dark:bg-[#00ff88] ${
             expanded ? "" : "top-2"
           }`}
         ></div>
-      )}
+      )} */}
 
       {!expanded && (
         <div
