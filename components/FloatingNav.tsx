@@ -13,10 +13,20 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { id: "dashboard", label: "Home", icon: <LayoutDashboard size={18} />, href: "/" },
+  {
+    id: "dashboard",
+    label: "Home",
+    icon: <LayoutDashboard size={18} />,
+    href: "/",
+  },
   { id: "boards", label: "Boards", icon: <LayoutList size={18} />, href: "/" },
   { id: "teams", label: "Teams", icon: <Users size={18} />, href: "/" },
-  { id: "settings", label: "Settings", icon: <Settings size={18} />, href: "/" },
+  {
+    id: "settings",
+    label: "Settings",
+    icon: <Settings size={18} />,
+    href: "/",
+  },
 ];
 
 export default function FloatingNav() {
@@ -94,23 +104,25 @@ export default function FloatingNav() {
         <button
           onClick={() => setTheme("light")}
           className={`hidden sm:block p-2 rounded-full transition-all duration-300 ${
-            theme === "light"
-              ? "bg-black/10"
-              : "hover:bg-black/10"
+            theme === "light" ? "bg-black/10" : "hover:bg-black/10"
           }`}
         >
-          <Sun size={18} className={isDark ? "text-gray-100" : "text-gray-800"} />
+          <Sun
+            size={18}
+            className={isDark ? "text-gray-100" : "text-gray-800"}
+          />
         </button>
 
         <button
           onClick={() => setTheme("dark")}
           className={`hidden sm:block p-2 rounded-full transition-all duration-300 ${
-            theme === "dark"
-              ? "bg-white/20"
-              : "hover:bg-black/10"
+            theme === "dark" ? "bg-white/20" : "hover:bg-black/10"
           }`}
         >
-          <Moon size={18} className={isDark ? "text-gray-100" : "text-gray-800"} />
+          <Moon
+            size={18}
+            className={isDark ? "text-gray-100" : "text-gray-800"}
+          />
         </button>
 
         {/* Mobile Toggle */}

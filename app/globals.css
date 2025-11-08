@@ -162,4 +162,7 @@
   animation: softGlow 3.5s ease-in-out infinite;
 }
 
+.hide-scrollbar::-webkit-scrollbar{
+  display: none
+}
 

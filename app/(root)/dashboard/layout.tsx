@@ -37,7 +37,7 @@ export default function DashboardLayout({
         <SidebarItem icon={<LifeBuoy size={20} />} text="Help" />
       </Sidebar> */}
       <Sidebar />
-      {children}
+      <div className="h-screen flex-1 overflow-scroll hide-scrollbar">{children}</div>
     </div>
   );
 }

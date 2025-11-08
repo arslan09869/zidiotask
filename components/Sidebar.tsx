@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import {
   ChevronFirst,
   ChevronLast,
@@ -15,12 +16,17 @@ import {
   Bell,
   Inbox,
   Folder,
+  Sun,
+  Moon,
 } from "lucide-react";
+import { useTheme } from "next-themes";
 import React, { useState } from "react";
 
 export default function Sidebar() {
   const [expanded, setExpanded] = useState(true);
   const [openProjects, setOpenProjects] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const isDark = theme === "dark";
 
   return (
     <aside className="h-screen overflow-hidden">
@@ -35,7 +41,7 @@ export default function Sidebar() {
         {/* ---------- Top Section ---------- */}
         <div className="p-4 pb-2 flex justify-between items-center border-b border-rose-200 dark:border-[#1a1a1a]">
           <img
-            src="/icon.png"
+            src="/avatar.png"
             alt="logo"
             className={`overflow-hidden transition-all ${
               expanded ? "w-12" : "w-0"
@@ -158,12 +164,76 @@ export default function Sidebar() {
             text="Help"
             expanded={expanded}
           />
+
+          {/* 🌞🌙 Theme Toggle */}
+          <div className="relative flex items-center justify-center">
+            {/* ✅ Expanded: Show Desktop Buttons */}
+            {expanded && (
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setTheme("light")}
+                  className={`p-2 rounded-full transition-all duration-300 ${
+                    theme === "light" ? "bg-black/10" : "hover:bg-black/10"
+                  }`}
+                >
+                  <Sun
+                    size={18}
+                    className={isDark ? "text-gray-100" : "text-gray-800"}
+                  />
+                </button>
+
+                <button
+                  onClick={() => setTheme("dark")}
+                  className={`p-2 rounded-full transition-all duration-300 ${
+                    theme === "dark" ? "bg-white/20" : "hover:bg-black/10"
+                  }`}
+                >
+                  <Moon
+                    size={18}
+                    className={isDark ? "text-gray-100" : "text-gray-800"}
+                  />
+                </button>
+              </div>
+            )}
+
+            {/* ✅ Collapsed: Single Toggle */}
+            {!expanded && (
+              <button
+                onClick={() => setTheme(isDark ? "light" : "dark")}
+                className="p-2 rounded-full transition-all duration-300 hover:bg-black/10"
+              >
+                <AnimatePresence mode="wait" initial={false}>
+                  {isDark ? (
+                    <motion.div
+                      key="moon"
+                      initial={{ rotate: -90, opacity: 0 }}
+                      animate={{ rotate: 0, opacity: 1 }}
+                      exit={{ rotate: 90, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Moon size={18} className="text-gray-100" />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="sun"
+                      initial={{ rotate: 90, opacity: 0 }}
+                      animate={{ rotate: 0, opacity: 1 }}
+                      exit={{ rotate: -90, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Sun size={18} className="text-gray-800" />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </button>
+            )}
+          </div>
         </ul>
 
         {/* ---------- User Section ---------- */}
         <div className="border-t border-rose-200 dark:border-[#1a1a1a] flex p-3 items-center">
           <img
-            src="/icon.png"
+            src="/avatar.png"
             alt="user"
             className="w-10 h-10 rounded-md border border-rose-300 dark:border-[#2a2a2a]"
           />
